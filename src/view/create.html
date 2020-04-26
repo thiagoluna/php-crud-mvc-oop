@@ -1,0 +1,21 @@
+<div id="main" class="container-fluid"style="margin-top: 10px">
+    <h1>Add New Post</h1>
+
+    <form method="post" action="?page=admin&action=insert">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Enter the Title">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="content">Message</label>
+                <textarea class="form-control" name="content" cols="25" rows="5" placeholder="Enter the Message"></textarea><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </form>
+</div>

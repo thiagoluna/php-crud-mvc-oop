@@ -1,0 +1,45 @@
+<section>
+    <article>
+        <header>
+            <h2>{{title}}</h2>
+        </header>
+
+        <p>{{content}}</p>
+
+        <br>
+        <hr>
+        <br>
+
+        <form method="post" action="http://localhost/crud_mvc_oo/?page=post&action=addComent">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="title">Name</label>
+                    <input type="text" class="form-control" id="title" name="nome" placeholder="Enter your Name">
+                    <input type="hidden" name="id" value="{{id}}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="content">Comment</label>
+                    <textarea class="form-control" name="msg" cols="25" rows="5" placeholder="Enter the Comment"></textarea><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </form>
+        <br><br>
+
+        {% if comments == false %}
+            <p>Nenhum comentário encontrado para essa postagem</p>
+        {% else %}
+            {% for coment in comments %}
+                <h3>{{coment.name}}</h3>
+                <p>{{coment.message}}</p>
+                <br>
+            {% endfor %}
+        {% endif %}
+
+    </article>
+
+</section>

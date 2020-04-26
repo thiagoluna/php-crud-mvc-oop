@@ -1,0 +1,29 @@
+<h1>ADMIN</h1>
+
+<a class="btn btn-primary pull-right h2" href="http://localhost/crud_mvc_oo/?page=admin&action=create">New Post</a><br><br>
+<hr>
+<br>
+<div id="list" class="row">
+    <div class="table-responsive col-md-12">
+        <table class="table table-striped" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                <tr>
+                    <th>{{post.id}}</th>
+                    <th>{{post.title}}</th>
+                    <th><a class="btn btn-success btn-xs" href="http://localhost/crud_mvc_oo/?page=admin&action=change&id={{post.id}}">Edit</a></th>
+                    <th><a class="btn btn-danger btn-xs" href="http://localhost/crud_mvc_oo/?page=admin&action=delete&id={{post.id}}">Delete</a></th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

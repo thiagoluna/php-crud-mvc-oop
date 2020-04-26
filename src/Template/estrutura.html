@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <style type="text/css">
+        *{margin: 0; padding: 0;}
+        body{background-color:#6495ED;}
+
+        #corpo{width: 1000px; background-color: #FFF; margin: 0 auto; border-left:2px solid #CCC; border-right:2px solid #CCC;}
+        #topo{padding: 20px 25px; border-bottom: 2px solid #CCC;}
+        #topo a{ color: #333; text-decoration: none; font:20px Arial;}
+        #topo a:hover{text-decoration: underline;}
+
+        .flutuacao-dir{float: right;}
+
+        #conteudo{background-color: #FFF; padding: 20px 25px;}
+        #conteudo h1{font:24px Arial; color:#6495ED; margin-bottom: 20px;}
+
+        #conteudo article{margin-bottom: 20px;}
+        article h2{  padding-bottom: 7px; }
+        article h2 a{font:22px Arial; color: #333; text-decoration: none;}
+        article h2 a:hover{ text-decoration: underline; }
+
+        article p{font:16px Arial; color: #333; padding-left: 2px;}
+    </style>
+</head>
+<body>
+    <div id="corpo">
+        <div id="topo">
+            <header>
+                <nav>
+                    <a href="http://localhost/crud_mvc_oo/">Home</a> |
+                    <a href="http://localhost/crud_mvc_oo/?page=about">About</a>
+                    <a href="http://localhost/crud_mvc_oo/?page=admin&action=index" class="flutuacao-dir">Admin</a>
+                </nav>
+            </header>
+        </div>
+
+        <div id="conteudo">
+            {{area_dinamica}}
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
